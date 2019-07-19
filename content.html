@@ -1,0 +1,379 @@
+﻿<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DLC-个人网站</title>
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link href="css/nprogress.css" type="text/css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js" type="text/javascript"></script>
+    <script src="js/respond.min.js" type="text/javascript"></script>
+    <script src="js/selectivizr-min.js" type="text/javascript"></script>
+<![endif]-->
+    <link rel="apple-touch-icon-precomposed" href="images/icon/icon.png">
+    <link rel="shortcut icon" href="images/icon/favicon.ico">
+    <meta name="Keywords" content="" />
+    <meta name="description" content="" />
+    <script type="text/javascript">
+        //判断浏览器是否支持HTML5
+        window.onload = function() {
+            if (!window.applicationCache) {
+                window.location.href = "ie.html";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <section class="container user-select">
+        <header>
+            <div class="hidden-xs header">
+                <!--超小屏幕不显示-->
+                <h1 class="logo">
+                    <a href="index.html" title="DLC-个人网站"></a>
+                </h1>
+                <ul class="nav hidden-xs-nav">
+                    <li class="active"><a href="index.html"><span class="glyphicon glyphicon-home"></span>网站主页</a></li>
+                    <li><a href="project.html"><span class="glyphicon glyphicon-pencil"></span>项目demo</a></li>
+                    <li><a href="photo.html"><span class="glyphicon glyphicon-book"></span>相册</a></li>
+                    <li><a href="about.html"><span class="glyphicon glyphicon-user"></span>关于我</a></li>
+                    <li><a href="message.html"><span class="glyphicon glyphicon-list-alt"></span>留言板</a></li>
+
+                </ul>
+                <div class="feeds">
+                    <a class="feed feed-xlweibo" href="https://weibo.com/" target="_blank"><i></i>新浪微博</a>
+                    <a class="feed feed-txweibo" href="https://baijiahao.baidu.com/" target="_blank"><i></i>百家号</a>
+                    <a class="feed feed-rss" href="https://mp.toutiao.com/profile_v3/index" target="_blank"><i></i>头条号</a>
+                    <a class="feed feed-weixin" data-toggle="popover" data-trigger="hover" title="微信扫一扫" data-html="true" data-content="<img src='images/weixin.png' alt=''>" href="javascript:;" target="_blank"><i></i>关注微信</a>
+                </div>
+                <div class="wall">
+                    <a href="#" target="_blank">读者墙</a> | <a href="#" target="_blank">标签云</a>
+                </div>
+            </div>
+            <!--/超小屏幕不显示-->
+            <div class="visible-xs header-xs">
+                <!--超小屏幕可见-->
+                <div class="navbar-header header-xs-logo">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#header-xs-menu" aria-expanded="false" aria-controls="navbar"><span
+                            class="glyphicon glyphicon-menu-hamburger"></span></button>
+                </div>
+                <div id="header-xs-menu" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav header-xs-nav">
+                        <li class="active"><a href="index.html"><span class="glyphicon glyphicon-home"></span>网站主页</a>
+                        </li>
+                        <li><a href="project.html"><span class="glyphicon glyphicon-pencil"></span>项目demo</a></li>
+                        <li><a href="photo.html"><span class="glyphicon glyphicon-book"></span>相册</a></li>
+                        <li><a href="about.html"><span class="glyphicon glyphicon-user"></span>关于我</a></li>
+                        <li><a href="about.html"><span class="glyphicon glyphicon-list-alt"></span>留言板</a></li>
+
+                    </ul>
+                    <form class="navbar-form" action="search.php" method="post" style="padding:0 25px;">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="请输入关键字">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default btn-search" type="submit">搜索</button>
+                            </span> </div>
+                    </form>
+                </div>
+            </div>
+        </header>
+        <!--/超小屏幕可见-->
+        <div class="content-wrap">
+            <!--内容-->
+            <div class="content">
+                <header class="news_header">
+                    <h2>你了解Ajax么？常用的ajax优化方法有哪些？</h2>
+                    <ul>
+                        <li>DLC 发布于 2019-01-10</li>
+                        <li>栏目：<a href="" title="" target="_blank">网站前端</a></li>
+                        <li>来源：<a href="" title="" target="_blank">互联网</a></li>
+                        <li><span class="glyphicon glyphicon-eye-open"></span> <strong>2002</strong> 预览</li>
+                        <li><strong> 10 </strong> 评论</li>
+                    </ul>
+                </header>
+                <article class="news_content">
+
+                    <h4>AJAX 简介</h4>
+
+                    <p>AJAX 全称 Asynchronous JavaScript and XML（异步的 JavaScript 和 XML）。将 AJAX 中处理的一些异步信息或叫“即时”信息，保存在缓存中，不要每次去异步处理时，都去 调用 DHMTL 的元素信息。</p>
+                    <p>正常情况下填好表单信息并提交后，整个表单信息会发送到服务器，服务器会将它转发给 处理表单的脚本，通常是后台的 PHP 或 JAVA，后台脚本执行完成后服务器会发送回全新 的页面信息。AJAX 正常会把 JavaScript 技术和 XMLHttpRequest 对象放在 Web 表单和服 务器之间，当填好表单信息并提交后，会先使用 JavaScript 代码执行而不是直接发送给 服务器，也就是说 JavaScript 代码会在后台发送请求到服务器，并且可以异步处理，即
+                        JavaScript 代码在发送信息时，不用等待服务器的响应，可以继续发送其它的信息。</p>
+                    <p>AJAX 与 WEB 和 DHTML 的关系如图所示。</p>
+                    <p><img src="images/img0-1.png" alt="" title="" /></p>
+
+                    <!-- <p><img src="images/img1.jpg" alt="" title="" /></p> -->
+                    <p>DHTML 是一种使 HTML 页面具有动态特性的艺术，DHTML 是一种创建动态和交互 WEB 站点的 技术集。对大多数人来说，DHTML 意味着 HTML、样式表和 JavaScript 的组合。 </p>
+                    <p>当发起主动 AJAX 请求时，用户可能仍须等待，所以必须优化请求，优化请求最主要的方 式就是使响应可以缓存。</p>
+                    <p>即当 AJAX 发送数据成功后，会把请求的 URL 和返回的响应结果信息保存在缓存中，这样 下次调用 AJAX 发送相同请求时，会直接从缓存中把数据取出来，这样可以提高请求的响 应速度。</p>
+
+                    <h4>通过 Ajax 缓存来提升页面性能</h4>
+
+                    <p>AJAX 缓存可以让请求对一些静态页面内容的信息处理的更迅速，比如图片、CSS 文件、JS 脚本等。可以让 AJAX 可缓存的响应头包括：Expires、Last-Modified 和 Cache-Control。
+                    </p>
+                    <p>Expires 是通过判断内容是否被修改来确定是否使用浏览器缓存中的内容，如果我们知道 内容何时修改，那么可以使用 Expires 响应头来处理。</p>
+                    <p>http/1.0 中定义的 header，是最基础的浏览器缓存处理，表示资源在一定时间内从浏览 器的缓存中获取资源，不需要请求服务器获取资源，从而达到快速获取资源，缓解服务器 压力的目的。
+                    </p>
+                    <p>在 response 的 header 中的格式为：Expires: Thu, 01 Dec 1994 16:00:00 GMT （必须是 GMT 格式） </p>
+
+                    <h4>应用：</h4>
+
+                    <p>1、可以在 html 页面中添加
+                        <textarea readonly name="" rows="1" cols="60"><meta http-equiv="Expires" content="Thu, 01 Dec 1994 16:00:00" /></textarea> 来给页面设置缓存时间。
+                    </p>
+                    <p>2、对于图片、css 等文件则需要在 IIS 或者 apache 等运行容器中进行规则配置来让 容器在请求资源的时候添加在 responese 的 header 中。 </p>
+                    <p>设置这个标记会通知浏览器使用 if-modified-since 头，通过 GET 请求来检查其本地缓存 相关信息，如果数据不需要更新，服务器将使用 HTTP 304 状态码来响应此请求，如果需 要更新则服务器返回 200 的状态码。 </p>
+                    <p>在浏览器第一次请求某一个 URL 时，服务器端的返回状态会是 200，内容是你请求的资 源，同时有一个 Last-Modified 的属性标记(HttpReponse Header)此文件在服务期端最后 被修改的时间，格式类似这样： Last-Modified:Thu, 28 Feb 2019 08:01:04 GMT
+                    </p>
+                    <p>客户端第二次请求此 URL 时，根据 HTTP 协议的规定，浏览器会向服务器传送 If- Modified-Since 报头(HttpRequest Header)，询问该时间之后文件是否有被修改过： If-Modified-Since:Thu, 28 Feb 2019 08:01:04 GMT
+                    </p>
+                    <p>如果服务器端的资源没有变化，则自动返回 HTTP304（NotChanged.）状态码，内容为 空，这样就节省了传输数据量。
+                    </p>
+                    <p>当服务器端代码发生改变或者重启服务器时，则重新发出资源，返回和第一次请求时类 似。从而保证不向客户端重复发出资源，也保证当服务器有变化时，客户端能够得到最新 的资源。 </p>
+                    <p>Cache-Control 指定请求和响应遵循的缓存机制。在请求消息或响应消息中设置 Cache- Control 并不会修改另一个消息处理过程中的缓存处理过程。请求时的缓存指令包括 no-cache、no-store、max-age、max-stale、min-fresh、only- if-cached，响应消息中的指令包括 public、private、no-cache、no-store、no transform、must-revalidate、proxy-revalidate、max-age。
+                    </p>
+                    <p>如果允许应该被设置为“public”，使其它用户可以在中间代理和缓存服务器上存储和共 享数据。Public 指示响应可被任何缓存区缓存。 </p>
+                    <p>jQuery 提供了一些 API，可以很轻松的创建 AJAX 请求，通过 jQuery AJAX 方法，您能够 使用 HTTP Get 和 HTTP Post 从远程服务器上请求文本、HTML、XML 或 JSON 同时您能够把 这些外部数据直接载入网页的被选元素中。
+                    </p>
+                    <p>jQuery 是一个 JavaScript 库，jQuery 极大地简化了 JavaScript 编程。jQuery 提供了 load()、get()和 post()方法，使用处理 AJAX 请求。 </p>
+                    <p>AJAX 缓存带来很多优点，但是 AJAX 缓存也存在不足，如果 AJAX 对一些后台数据进行更 改时，虽然数据在服务器端修改了，但是浏览器缓存中的结果并没有以改变，浏览器只是 简单的从缓存中读取数据并返回到客户端。当然要解决 AJAX 缓存的问题可以禁止页面缓 存。 </p>
+                    <h4>什么时候应该用 Ajax？</h4>
+                    <p>先看看 Ajax 和传统 Server Centri Web 架构的区别。</p>
+                    <p><img src="images/img0-2.png" alt="" title="" /></p>
+                    <p>Ajax 本质上是一种浏览器端技术，从图中可以看出，传统 Server Centri Web 架构的最 大区别是将大量业务逻辑从服务器端移到浏览器。 </p>
+                    <p>好处是当数据发生变更时，只需要重新渲染相关的 HTML，而不需要加载整个页面。坏处 是使用大量 Ajax 的项目与其说是 B/S 架构，不如说是 C/S 架构，自然也具备 C/S 架构的 特点，在浏览器环境下，某些特点会成为缺陷。
+                    </p>
+                    <p>比如说 Ajax 要求业务逻辑必须先于数据加载，浏览器必须加载完相关 js 文件后才能开 始加载数据，因此第一次页面 ready 的时间会晚于传统 Web 页面。不过这样的问题也有 很多解决方案，例如 Application Cache 可以将文件保存在浏览器里，避免反复加载相 同的脚本和资源文件。
+                    </p>
+                    <p>所以结论是：是否应该使用 Ajax 取决于业务流程和技术栈 那怎么判定一个业务流程是否适合 Ajax 呢？</p>
+                    <h4>举个例子：</h4>
+                    <p>假如你需要在微信里接入一个卖水果的活动，流程可以如下设计： </p>
+                    <h4>关于使用 Ajax 建议 </h4>
+                    <p>页面上首次显示的内容尽量不要用 Ajax，显示更多（或换页）的时候再用 比如说知乎首页的第一页 Timeline 上的问题是直接从服务器读取的，并写入在当 前的页面源代码里面的，而随后 “显示更多” 得到的内容才是用 Ajax 读取。 </p>
+                    <p>切换页面的时候不用要 Ajax 不要因为网页的 header 或者 side 部分没有变化而用 Ajax。 因为这是不同的页面，换句话说，是有完全不同的内容或者完全不同的页面逻辑。 他们的 URL 就应该不同。</p>
+                    <p>补充：使用了 HTML5 History API 例外，但是同时要考虑兼容早期版本的浏览 器。 </p>
+                    <p>提交、修改、删除的部分一般用 Ajax </p>
+                    <p>消息提醒的部分一般用 Ajax 因为很有可能会用到 Comet 长连接来保证消息的实时推送，那么除了 WebSocket 之外最好的选择只有 Ajax。 </p>
+                    <p>编码的时候模块分工明确 比如使用了 jQuery，那么所有的 Ajax 请求都最好做一层包装，然后再转移给 $.post 或者 $.ajax 之类的方法。</p>
+
+                </article>
+                <div class="reprint">转载请说明出处：<a href="" title="" target="_blank">DLC-个人网站</a> » <a href="" title="" target="_blank">欢迎来到DLC-个人网站</a></div>
+                <div class="zambia"><a href="javascript:;" name="zambia" rel=""><span
+                            class="glyphicon glyphicon-thumbs-up"></span> 赞（0）</a></div>
+                <nav class="page-nav"> <span class="page-nav-prev">上一篇<br />
+                        <a href="content.html" rel="prev">常用的ajax优化方法有哪些？</a></span> <span class="page-nav-next">下一篇<br />
+                        <a href="content 1.html" rel="next">如何减少 HTTP 请求 确保你的性能最优</a></span> </nav>
+
+                <div class="content-block comment">
+                    <h2 class="title"><strong>评论</strong></h2>
+                    <form action="comment.php" method="post" class="form-inline" id="comment-form">
+
+                        <div class="comment-form">
+                            <textarea placeholder="说说您的想法" name="commentContent"></textarea>
+                            <div class="comment-form-footer">
+                                <div class="comment-form-text">请先 <a href="javascript:;">登录</a> 或 <a href="javascript:;">注册</a>，也可匿名评论 </div>
+                                <div class="comment-form-btn">
+                                    <button type="submit" class="btn btn-default btn-comment">提交评论</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        <!--/内容-->
+        <aside class="sidebar visible-lg">
+            <!--右侧>992px显示-->
+            <div class="sentence"> <strong>每日一句</strong>
+                <h2>2019年5月1日 星期三</h2>
+                <p>如果你看到面前的阴影，别怕，那是因为你的背后有阳光。</p>
+            </div>
+            <div id="search" class="sidebar-block search" role="search">
+                <h2 class="title"><strong>搜索</strong></h2>
+                <form class="navbar-form" action="search.php" method="post">
+                    <div class="input-group">
+                        <input type="text" class="form-control" size="35" placeholder="请输入关键字">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default btn-search" type="submit">搜索</button>
+                        </span> </div>
+                </form>
+            </div>
+            <div class="sidebar-block recommend">
+                <h2 class="title"><strong>热门推荐</strong></h2>
+                <ul>
+                    <li>
+                        <a target="_blank" href="content 4.html"> <span class="thumb"><img src="images/icon/icon1.png" alt=""></span>
+                            <span class="text">如何进行代码压缩使页面性能最优（HTTP压缩）...</span> <span class="text-muted">阅读(2165)</span></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="content 3.html"> <span class="thumb"><img src="images/icon/icon2.png" alt=""></span>
+                            <span class="text">webpack 基本架构 ...</span> <span class="text-muted">阅读(2165)</span></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="content 2.html"> <span class="thumb"><img src="images/icon/icon4.png" alt=""></span>
+                            <span class="text">如何使用内容发布网络（CDN)优化网络性能 ...</span> <span class="text-muted">阅读(2165)</span></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="content 1.html"> <span class="thumb"><img src="images/icon/icon3.png" alt=""></span>
+                            <span class="text">如何减少 HTTP 请求 确保你的性能最优 ...</span> <span class="text-muted">阅读(2165)</span></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="content.html"> <span class="thumb"><img src="images/icon/icon0.png" alt=""></span>
+                            <span class="text">常用的 ajax 优化方法有哪些 ...</span> <span class="text-muted">阅读(2165)</span></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sidebar-block comment">
+                <h2 class="title"><strong>最新评论</strong></h2>
+                <ul>
+                    <li data-toggle="tooltip" data-placement="top" title=""><a target="_blank" href=""><span
+                                class="face"><img src="images/icon/icon.png" alt=""></span> <span
+                                class="text"><strong>猎户星座</strong> (2015-10-18) 说：<br />
+                                感谢分享，学习了很受益 ...</span></a></li>
+                    <li data-toggle="tooltip" data-placement="top" title=""><a target="_blank" href=""><span
+                                class="face"><img src="images/icon/icon.png" alt=""></span> <span
+                                class="text"><strong>人生苦短</strong> (2015-10-18) 说：<br />
+                                学习了，加油站长 ...</span></a></li>
+                    <li data-toggle="tooltip" data-placement="top" title=""><a target="_blank" href=""><span class="face"><img src="images/icon/icon.png" alt=""></span>
+                            <span class="text"><strong>负刀入梦里</strong> (2015-10-18) 说：<br />
+                                文章很详细，也通俗易懂，很是受益 ...</span></a></li>
+                    <li data-toggle="tooltip" data-placement="top" title=""><a target="_blank" href=""><span class="face"><img src="images/icon/icon.png" alt=""></span>
+                            <span class="text"><strong>梦幻代码</strong> (2015-10-18) 说：<br />
+                                人生苦短，我用Python ...</span></a></li>
+                    <li data-toggle="tooltip" data-placement="top" title=""><a target="_blank" href=""><span class="face"><img src="images/icon/icon.png" alt=""></span>
+                            <span class="text"><strong>宅男</strong> (2015-10-18) 说：<br />
+                                大神，前端有哪些框架呢 ...</span></a></li>
+                </ul>
+            </div>
+        </aside>
+        <!--/右侧>992px显示-->
+        <footer class="footer">邓力才 | 版权所有 &copy;<a href="#">2018-2019</a>&nbsp;| 网站创建时间：2019-05-01 08:10:20 &nbsp;&nbsp;&nbsp;<span><a href="http://icp.chinaz.com/"
+            target="_blank">粤ICP备xxxxxxxx号-x</a></span>
+        </footer>
+    </section>
+    <div>
+        <a href="javascript:;" class="gotop" style="display:none;"></a>
+    </div>
+    <!--/返回顶部-->
+    <script src="js/jquery-2.1.4.min.js" type="text/javascript"></script>
+    <script src="js/nprogress.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        //页面加载
+        $('body').show();
+        $('.version').text(NProgress.version);
+        NProgress.start();
+        setTimeout(function() {
+            NProgress.done();
+            $('.fade').removeClass('out');
+        }, 1000);
+        //返回顶部按钮
+        $(function() {
+            $(window).scroll(function() {
+                if ($(window).scrollTop() > 100) {
+                    $(".gotop").fadeIn();
+                } else {
+                    $(".gotop").hide();
+                }
+            });
+            $(".gotop").click(function() {
+                $('html,body').animate({
+                    'scrollTop': 0
+                }, 500);
+            });
+        });
+        //提示插件启用
+        $(function() {
+            $('[data-toggle="popover"]').popover();
+        });
+        $(function() {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+        //鼠标滑过显示 滑离隐藏
+        //banner
+        $(function() {
+            $(".carousel").hover(function() {
+                $(this).find(".carousel-control").show();
+            }, function() {
+                $(this).find(".carousel-control").hide();
+            });
+        });
+        //本周热门
+        $(function() {
+            $(".hot-content ul li").hover(function() {
+                $(this).find("h3").show();
+            }, function() {
+                $(this).find("h3").hide();
+            });
+        });
+        //相关推荐
+        $(function() {
+            $(".related-content ul li").hover(function() {
+                $(this).find("h3").show();
+            }, function() {
+                $(this).find("h3").hide();
+            });
+        });
+        //页面元素智能定位
+        $.fn.smartFloat = function() {
+            var position = function(element) {
+                var top = element.position().top; //当前元素对象element距离浏览器上边缘的距离 
+                var pos = element.css("position"); //当前元素距离页面document顶部的距离
+                $(window).scroll(function() { //侦听滚动时 
+                    var scrolls = $(this).scrollTop();
+                    if (scrolls > top) { //如果滚动到页面超出了当前元素element的相对页面顶部的高度 
+                        if (window.XMLHttpRequest) { //如果不是ie6 
+                            element.css({ //设置css 
+                                position: "fixed", //固定定位,即不再跟随滚动 
+                                top: 0 //距离页面顶部为0 
+                            }).addClass("shadow"); //加上阴影样式.shadow 
+                        } else { //如果是ie6 
+                            element.css({
+                                top: scrolls //与页面顶部距离 
+                            });
+                        }
+                    } else {
+                        element.css({ //如果当前元素element未滚动到浏览器上边缘，则使用默认样式 
+                            position: pos,
+                            top: top
+                        }).removeClass("shadow"); //移除阴影样式.shadow 
+                    }
+                });
+            };
+            return $(this).each(function() {
+                position($(this));
+            });
+        };
+        //启用页面元素智能定位
+        $(function() {
+            $("#search").smartFloat();
+        });
+
+
+        //ajax更新点赞值
+        $(function() {
+            $(".content .zambia a").click(function() {
+                var zambia = $(this);
+                var id = zambia.attr("rel"); //对应id   
+                zambia.fadeOut(1000); //渐隐效果   
+                $.ajax({
+                    type: "POST",
+                    url: "zambia.php",
+                    data: "id=" + id,
+                    cache: false, //不缓存此页面   
+                    success: function(data) {
+                        zambia.html(data);
+                        zambia.fadeIn(1000); //渐显效果   
+                    }
+                });
+                return false;
+            });
+        })
+    </script>
+</body>
+
+</html>

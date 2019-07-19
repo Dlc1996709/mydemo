@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.content-wrap .content p {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: rgb(200, 100, 50);
+    text-align: center;
+    font-size: 30px;
+    border: 1px dotted #f40;
+}
+
+.content-wrap .content .im .ph {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-grow: 300px;
+    position: abou;
+}
+
+.content-wrap .content .im .ph .imge {
+    width: 300px;
+    height: 100%;
+    /* float: left; */
+    cursor: pointer;
+    margin: 10px 10px;
+}

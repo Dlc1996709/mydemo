@@ -1,0 +1,401 @@
+﻿<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DLC-个人网站</title>
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link href="css/nprogress.css" type="text/css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js" type="text/javascript"></script>
+    <script src="js/respond.min.js" type="text/javascript"></script>
+    <script src="js/selectivizr-min.js" type="text/javascript"></script>
+<![endif]-->
+    <link rel="apple-touch-icon-precomposed" href="images/icon/icon.png">
+    <link rel="shortcut icon" href="images/icon/favicon.ico">
+    <meta name="Keywords" content="" />
+    <meta name="description" content="" />
+    <script type="text/javascript">
+        //判断浏览器是否支持HTML5
+        window.onload = function() {
+            if (!window.applicationCache) {
+                window.location.href = "ie.html";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <section class="container user-select">
+        <header>
+            <div class="hidden-xs header">
+                <!--超小屏幕不显示-->
+                <h1 class="logo">
+                    <a href="index.html" title="DLC-个人网站"></a>
+                </h1>
+                <ul class="nav hidden-xs-nav">
+                    <li class="active"><a href="index.html"><span class="glyphicon glyphicon-home"></span>网站主页</a></li>
+                    <li><a href="project.html"><span class="glyphicon glyphicon-pencil"></span>项目demo</a></li>
+                    <li><a href=""><span class="glyphicon glyphicon-book"></span>相册</a></li>
+                    <li><a href="about.html"><span class="glyphicon glyphicon-user"></span>关于我</a></li>
+                    <li><a href="message.html"><span class="glyphicon glyphicon-list-alt"></span>留言板</a></li>
+
+                </ul>
+                <div class="feeds">
+                    <a class="feed feed-xlweibo" href="https://weibo.com/" target="_blank"><i></i>新浪微博</a>
+                    <a class="feed feed-txweibo" href="https://baijiahao.baidu.com/" target="_blank"><i></i>百家号</a>
+                    <a class="feed feed-rss" href="https://mp.toutiao.com/profile_v3/index" target="_blank"><i></i>头条号</a>
+                    <a class="feed feed-weixin" data-toggle="popover" data-trigger="hover" title="微信扫一扫" data-html="true" data-content="<img src='images/weixin.png' alt=''>" href="javascript:;" target="_blank"><i></i>关注微信</a>
+                </div>
+                <div class="wall">
+                    <a href="#" target="_blank">读者墙</a> | <a href="#" target="_blank">标签云</a>
+                </div>
+            </div>
+            <!--/超小屏幕不显示-->
+            <div class="visible-xs header-xs">
+                <!--超小屏幕可见-->
+                <div class="navbar-header header-xs-logo">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#header-xs-menu" aria-expanded="false" aria-controls="navbar"><span
+                            class="glyphicon glyphicon-menu-hamburger"></span></button>
+                </div>
+                <div id="header-xs-menu" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav header-xs-nav">
+                        <li class="active"><a href="index.html"><span class="glyphicon glyphicon-home"></span>网站主页</a>
+                        </li>
+                        <li><a href="project.html"><span class="glyphicon glyphicon-pencil"></span>项目demo</a></li>
+                        <li><a href="photo.html"><span class="glyphicon glyphicon-book"></span>相册</a></li>
+                        <li><a href="about.html"><span class="glyphicon glyphicon-user"></span>关于我</a></li>
+                        <li><a href="about.html"><span class="glyphicon glyphicon-list-alt"></span>留言板</a></li>
+
+                    </ul>
+                    <form class="navbar-form" action="search.php" method="post" style="padding:0 25px;">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="请输入关键字">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default btn-search" type="submit">搜索</button>
+                            </span> </div>
+                    </form>
+                </div>
+            </div>
+        </header>
+        <!--/超小屏幕可见-->
+        <div class="content-wrap">
+            <!--内容-->
+            <div class="content">
+                <header class="news_header">
+                    <h2>你了解 HTTP 么？你知道如何减少 HTTP 请求 确保你的性能最优</h2>
+                    <ul>
+                        <li>DLC 发布于 2019-01-10</li>
+                        <li>栏目：<a href="" title="" target="_blank">网站前端</a></li>
+                        <li>来源：<a href="" title="" target="_blank">互联网</a></li>
+                        <li><span class="glyphicon glyphicon-eye-open"></span> <strong>2002</strong> 预览</li>
+                        <li><strong> 10 </strong> 评论</li>
+                    </ul>
+                </header>
+                <article class="news_content">
+
+                    <h4>HTTP 简介</h4>
+
+                    <p>超文本传输协议（HTTP，HyperText Transfer Protocol)是互联网上应用最为广泛的一 种网络协议。所有的 WWW 文件都必须遵守这个标准。设计 HTTP 最初的目的是为了提供一 种发布和接收 HTML 页面的方法。1960 年美国人 Ted Nelson 构思了一种通过计算机处理 文本信息的方法，并称之为超文本（hypertext）,这成为了 HTTP 超文本传输协议标准架 构的发展根基。Ted Nelson 组织协调万维网协会（World
+                        Wide Web Consortium）和互联 网工程工作小组（Internet Engineering Task Force ）共同合作研究，最终发布了一系 列的 RFC，其中著名的 RFC 2616 定义了 HTTP 1.1。 </p>
+                    <h4>1.0 版本 </h4>
+                    <p>1996 年 5 月，HTTP/1.0 版本发布，内容大大增加。</p>
+                    <p>首先，任何格式的内容都可以发送。这使得互联网不仅可以传输文字，还能传输图像、视 频、二进制文件。这为互联网的大发展奠定了基础。 </p>
+                    <!-- <p><img src="images/img2.png" alt="" title="" /></p> -->
+
+                    <p>其次，除了 GET 命令，还引入了 POST 命令和 HEAD 命令，丰富了浏览器与服务器的互动 手段。 </p>
+                    <p>再次，HTTP 请求和回应的格式也变了。除了数据部分，每次通信都必须包括头信息 （HTTP header），用来描述一些元数据。</p>
+                    <p>其他的新增功能还包括状态码（status code）、多字符集支持、多部分发送（multipart type）、权限（authorization）、缓存（cache）、内容编码（content encoding）等。</p>
+
+                    <h4>请求格式 </h4>
+
+                    <p>GET / HTTP/1.0 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) Accept: */*
+                    </p>
+                    <p>可以看到，这个格式与 0.9 版有很大变化。 </p>
+                    <p>第一行是请求命令，必须在尾部添加协议版本（HTTP/1.0）。后面就是多行头信息，描述 客户端的情况。
+                    </p>
+                    <h4>回应格式</h4>
+                    <p>服务器的回应如下。</p>
+                    <p class="min">>HTTP/1.0 200 OK</p>
+                    <p class="min">>Content-Type: text/plain</p>
+                    <p class="min">>Content-Length: 137582 </p>
+                    <p class="min">>Expires: Thu, 05 Dec 1997 16:00:00 GMT </p>
+                    <p class="min">>Last-Modified: Wed, 5 August 1996 15:55:28 GMT </p>
+                    <p class="min">>Server: Apache 0.84 </p>
+                    <p>回应的格式是"头信息 + 一个空行（\r\n） + 数据"。其中，第一行是"协议版本 + 状态 码（status code） + 状态描述"。
+                    </p>
+                    <h4>Content-Type 字段</h4>
+                    <p>关于字符的编码，1.0 版规定，头信息必须是 ASCII 码，后面的数据可以是任何格式。 因此，服务器回应的时候，必须告诉客户端，数据是什么格式，这就是 Content-Type 字 段的作用。 </p>
+                    <p>下面是一些常见的 Content-Type 字段的值。 </p>
+                    <p class="min">text/plain</p>
+                    <p class="min">text/html</p>
+                    <p class="min">text/css </p>
+                    <p class="min">image/jpeg </p>
+                    <p class="min">image/png</p>
+                    <p class="min">image/svg+xml</p>
+                    <p class="min">audio/mp4 </p>
+                    <p class="min">video/mp4</p>
+                    <p class="min">application/javascript </p>
+                    <p class="min">application/pdf </p>
+                    <p class="min">application/zip </p>
+                    <p class="min"> application/atom+xml </p>
+                    <p>这些数据类型总称为 MIME type，每个值包括一级类型和二级类型，之间用斜杠分隔。
+                    </p>
+                    <p>除了预定义的类型，厂商也可以自定义类型。
+                    </p>
+                    <p>application/vnd.debian.binary-package
+                    </p>
+                    <p>上面的类型表明，发送的是 Debian 系统的二进制数据包。 </p>
+                    <p>MIME type 还可以在尾部使用分号，添加参数。
+                    </p>
+                    <p>Content-Type: text/html; charset=utf-8</p>
+                    <p>上面的类型表明，发送的是网页，而且编码是 UTF-8。
+                    </p>
+                    <p>客户端请求的时候，可以使用 Accept 字段声明自己可以接受哪些数据格式</p>
+                    <p> Accept: */* </p>
+                    <p>上面代码中，客户端声明自己可以接受任何格式的数据。 </p>
+                    <p>MIME type 不仅用在 HTTP 协议，还可以用在其他地方，比如 HTML 网页。 </p>
+                    <p><textarea readonly name="" rows="3" cols="78"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+                        <!-- 等同于 --> 
+                        <meta charset="utf-8" /></textarea> </p>
+                    <!-- <p><img src="images/img3.png" alt="" title="" /></p> -->
+                    <h4>Content-Encoding 字段 </h4>
+                    <p>由于发送的数据可以是任何格式，因此可以把数据压缩后再发送。Content-Encoding 字 段说明数据的压缩方法。</p>
+                    <p class="min">Content-Encoding: gzipz</p>
+                    <p class="min">Content-Encoding: compress</p>
+                    <p class="min">Content-Encoding: deflate </p>
+                    <p>客户端在请求时，用 Accept-Encoding 字段说明自己可以接受哪些压缩方法。</p>
+                    <p>Accept-Encoding: gzip, deflate </p>
+                    <h4>缺点</h4>
+                    <p>HTTP/1.0 版的主要缺点是，每个 TCP 连接只能发送一个请求。发送数据完毕，连接就关 闭，如果还要请求其他资源，就必须再新建一个连接。
+                    </p>
+                    <p>TCP 连接的新建成本很高，因为需要客户端和服务器三次握手，并且开始时发送速率较慢 （slow start）。所以，HTTP 1.0 版本的性能比较差。随着网页加载的外部资源越来越 多，这个问题就愈发突出了。 </p>
+                    <p>为了解决这个问题，有些浏览器在请求时，用了一个非标准的 Connection 字段。</p>
+                    <p>Connection: keep-alive </p>
+                    <p>这个字段要求服务器不要关闭 TCP 连接，以便其他请求复用。服务器同样回应这个字段。</p>
+                    <p>Connection: keep-alive </p>
+                    <p>一个可以复用的 TCP 连接就建立了，直到客户端或服务器主动关闭连接。但是，这不是标 准字段，不同实现的行为可能不一致，因此不是根本的解决办法。</p>
+
+
+                </article>
+                <div class="reprint">转载请说明出处：<a href="" title="" target="_blank">DLC-个人网站</a> » <a href="" title="" target="_blank">欢迎来到DLC-个人网站</a></div>
+                <div class="zambia"><a href="javascript:;" name="zambia" rel=""><span
+                            class="glyphicon glyphicon-thumbs-up"></span> 赞（0）</a></div>
+
+                <nav class="page-nav"> <span class="page-nav-prev">上一篇<br />
+                        <a href="content.html" rel="prev">常用的 ajax 优化方法有哪些</a></span> <span class="page-nav-next">下一篇<br />
+                        <a href="content 2.html" rel="next">如何使用内容发布网络（CDN)优化网络性能</a></span> </nav>
+
+                <div class="content-block comment">
+                    <h2 class="title"><strong>评论</strong></h2>
+                    <form action="comment.php" method="post" class="form-inline" id="comment-form">
+
+                        <div class="comment-form">
+                            <textarea placeholder="说说您的想法" name="commentContent"></textarea>
+                            <div class="comment-form-footer">
+                                <div class="comment-form-text">请先 <a href="javascript:;">登录</a> 或 <a href="javascript:;">注册</a>，也可匿名评论 </div>
+                                <div class="comment-form-btn">
+                                    <button type="submit" class="btn btn-default btn-comment">提交评论</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        <!--/内容-->
+        <aside class="sidebar visible-lg">
+            <!--右侧>992px显示-->
+            <div class="sentence"> <strong>每日一句</strong>
+                <h2>2019年5月1日 星期三</h2>
+                <p>如果你看到面前的阴影，别怕，那是因为你的背后有阳光。</p>
+            </div>
+            <div id="search" class="sidebar-block search" role="search">
+                <h2 class="title"><strong>搜索</strong></h2>
+                <form class="navbar-form" action="search.php" method="post">
+                    <div class="input-group">
+                        <input type="text" class="form-control" size="35" placeholder="请输入关键字">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default btn-search" type="submit">搜索</button>
+                        </span> </div>
+                </form>
+            </div>
+            <div class="sidebar-block recommend">
+                <h2 class="title"><strong>热门推荐</strong></h2>
+                <ul>
+                    <li>
+                        <a target="_blank" href="content 4.html"> <span class="thumb"><img src="images/icon/icon1.png" alt=""></span>
+                            <span class="text">如何进行代码压缩使页面性能最优（HTTP压缩）...</span> <span class="text-muted">阅读(2165)</span></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="content 3.html"> <span class="thumb"><img src="images/icon/icon2.png" alt=""></span>
+                            <span class="text">webpack 基本架构 ...</span> <span class="text-muted">阅读(2165)</span></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="content 2.html"> <span class="thumb"><img src="images/icon/icon4.png" alt=""></span>
+                            <span class="text">如何使用内容发布网络（CDN)优化网络性能 ...</span> <span class="text-muted">阅读(2165)</span></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="content 1.html"> <span class="thumb"><img src="images/icon/icon3.png" alt=""></span>
+                            <span class="text">如何减少 HTTP 请求 确保你的性能最优 ...</span> <span class="text-muted">阅读(2165)</span></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="content.html"> <span class="thumb"><img src="images/icon/icon0.png" alt=""></span>
+                            <span class="text">常用的 ajax 优化方法有哪些 ...</span> <span class="text-muted">阅读(2165)</span></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sidebar-block comment">
+                <h2 class="title"><strong>最新评论</strong></h2>
+                <ul>
+                    <li data-toggle="tooltip" data-placement="top" title=""><a target="_blank" href=""><span
+                                class="face"><img src="images/icon/icon.png" alt=""></span> <span
+                                class="text"><strong>猎户星座</strong> (2015-10-18) 说：<br />
+                                感谢分享，学习了很受益 ...</span></a></li>
+                    <li data-toggle="tooltip" data-placement="top" title=""><a target="_blank" href=""><span
+                                class="face"><img src="images/icon/icon.png" alt=""></span> <span
+                                class="text"><strong>人生苦短</strong> (2015-10-18) 说：<br />
+                                学习了，加油站长 ...</span></a></li>
+                    <li data-toggle="tooltip" data-placement="top" title=""><a target="_blank" href=""><span class="face"><img src="images/icon/icon.png" alt=""></span>
+                            <span class="text"><strong>负刀入梦里</strong> (2015-10-18) 说：<br />
+                                文章很详细，也通俗易懂，很是受益 ...</span></a></li>
+                    <li data-toggle="tooltip" data-placement="top" title=""><a target="_blank" href=""><span class="face"><img src="images/icon/icon.png" alt=""></span>
+                            <span class="text"><strong>梦幻代码</strong> (2015-10-18) 说：<br />
+                                人生苦短，我用Python ...</span></a></li>
+                    <li data-toggle="tooltip" data-placement="top" title=""><a target="_blank" href=""><span class="face"><img src="images/icon/icon.png" alt=""></span>
+                            <span class="text"><strong>宅男</strong> (2015-10-18) 说：<br />
+                                大神，前端有哪些框架呢 ...</span></a></li>
+                </ul>
+            </div>
+        </aside>
+        <!--/右侧>992px显示-->
+        <footer class="footer">邓力才 | 版权所有 &copy;<a href="#">2018-2019</a>&nbsp;| 网站创建时间：2019-05-01 08:10:20 &nbsp;&nbsp;&nbsp;<span><a href="http://icp.chinaz.com/"
+            target="_blank">粤ICP备xxxxxxxx号-x</a></span>
+        </footer>
+    </section>
+    <div>
+        <a href="javascript:;" class="gotop" style="display:none;"></a>
+    </div>
+    <!--/返回顶部-->
+    <script src="js/jquery-2.1.4.min.js" type="text/javascript"></script>
+    <script src="js/nprogress.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        //页面加载
+        $('body').show();
+        $('.version').text(NProgress.version);
+        NProgress.start();
+        setTimeout(function() {
+            NProgress.done();
+            $('.fade').removeClass('out');
+        }, 1000);
+        //返回顶部按钮
+        $(function() {
+            $(window).scroll(function() {
+                if ($(window).scrollTop() > 100) {
+                    $(".gotop").fadeIn();
+                } else {
+                    $(".gotop").hide();
+                }
+            });
+            $(".gotop").click(function() {
+                $('html,body').animate({
+                    'scrollTop': 0
+                }, 500);
+            });
+        });
+        //提示插件启用
+        $(function() {
+            $('[data-toggle="popover"]').popover();
+        });
+        $(function() {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+        //鼠标滑过显示 滑离隐藏
+        //banner
+        $(function() {
+            $(".carousel").hover(function() {
+                $(this).find(".carousel-control").show();
+            }, function() {
+                $(this).find(".carousel-control").hide();
+            });
+        });
+        //本周热门
+        $(function() {
+            $(".hot-content ul li").hover(function() {
+                $(this).find("h3").show();
+            }, function() {
+                $(this).find("h3").hide();
+            });
+        });
+        //相关推荐
+        $(function() {
+            $(".related-content ul li").hover(function() {
+                $(this).find("h3").show();
+            }, function() {
+                $(this).find("h3").hide();
+            });
+        });
+        //页面元素智能定位
+        $.fn.smartFloat = function() {
+            var position = function(element) {
+                var top = element.position().top; //当前元素对象element距离浏览器上边缘的距离 
+                var pos = element.css("position"); //当前元素距离页面document顶部的距离
+                $(window).scroll(function() { //侦听滚动时 
+                    var scrolls = $(this).scrollTop();
+                    if (scrolls > top) { //如果滚动到页面超出了当前元素element的相对页面顶部的高度 
+                        if (window.XMLHttpRequest) { //如果不是ie6 
+                            element.css({ //设置css 
+                                position: "fixed", //固定定位,即不再跟随滚动 
+                                top: 0 //距离页面顶部为0 
+                            }).addClass("shadow"); //加上阴影样式.shadow 
+                        } else { //如果是ie6 
+                            element.css({
+                                top: scrolls //与页面顶部距离 
+                            });
+                        }
+                    } else {
+                        element.css({ //如果当前元素element未滚动到浏览器上边缘，则使用默认样式 
+                            position: pos,
+                            top: top
+                        }).removeClass("shadow"); //移除阴影样式.shadow 
+                    }
+                });
+            };
+            return $(this).each(function() {
+                position($(this));
+            });
+        };
+        //启用页面元素智能定位
+        $(function() {
+            $("#search").smartFloat();
+        });
+
+
+        //ajax更新点赞值
+        $(function() {
+            $(".content .zambia a").click(function() {
+                var zambia = $(this);
+                var id = zambia.attr("rel"); //对应id   
+                zambia.fadeOut(1000); //渐隐效果   
+                $.ajax({
+                    type: "POST",
+                    url: "zambia.php",
+                    data: "id=" + id,
+                    cache: false, //不缓存此页面   
+                    success: function(data) {
+                        zambia.html(data);
+                        zambia.fadeIn(1000); //渐显效果   
+                    }
+                });
+                return false;
+            });
+        })
+    </script>
+</body>
+
+</html>

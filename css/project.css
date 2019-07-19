@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* .content-wrap .content {
+    position: relative;
+} */
+
+.content-wrap .content .wel p {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: rgb(200, 100, 50);
+    text-align: center;
+    font-size: 30px;
+    border: 1px dotted #f40;
+}
+
+.content-wrap .content h3 {
+    text-align: center;
+    margin: 10px 0px;
+}
+
+.content-wrap .content .ag {
+    width: 590px;
+    height: 100%;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.content-wrap .content button {
+    display: block;
+    margin: 5px auto;
+    border-radius: 10px;
+}

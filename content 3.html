@@ -1,0 +1,479 @@
+﻿<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DLC-个人网站</title>
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link href="css/nprogress.css" type="text/css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js" type="text/javascript"></script>
+    <script src="js/respond.min.js" type="text/javascript"></script>
+    <script src="js/selectivizr-min.js" type="text/javascript"></script>
+<![endif]-->
+    <link rel="apple-touch-icon-precomposed" href="images/icon/icon.png">
+    <link rel="shortcut icon" href="images/icon/favicon.ico">
+    <meta name="Keywords" content="" />
+    <meta name="description" content="" />
+    <script type="text/javascript">
+        //判断浏览器是否支持HTML5
+        window.onload = function() {
+            if (!window.applicationCache) {
+                window.location.href = "ie.html";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <section class="container user-select">
+        <header>
+            <div class="hidden-xs header">
+                <!--超小屏幕不显示-->
+                <h1 class="logo">
+                    <a href="index.html" title="DLC-个人网站"></a>
+                </h1>
+                <ul class="nav hidden-xs-nav">
+                    <li class="active"><a href="index.html"><span class="glyphicon glyphicon-home"></span>网站主页</a></li>
+                    <li><a href="project.html"><span class="glyphicon glyphicon-pencil"></span>项目demo</a></li>
+                    <li><a href="photo.html"><span class="glyphicon glyphicon-book"></span>相册</a></li>
+                    <li><a href="about.html"><span class="glyphicon glyphicon-user"></span>关于我</a></li>
+                    <li><a href="about.html"><span class="glyphicon glyphicon-list-alt"></span>留言板</a></li>
+
+                </ul>
+                <div class="feeds">
+                    <a class="feed feed-xlweibo" href="https://weibo.com/" target="_blank"><i></i>新浪微博</a>
+                    <a class="feed feed-txweibo" href="https://baijiahao.baidu.com/" target="_blank"><i></i>百家号</a>
+                    <a class="feed feed-rss" href="https://mp.toutiao.com/profile_v3/index" target="_blank"><i></i>头条号</a>
+                    <a class="feed feed-weixin" data-toggle="popover" data-trigger="hover" title="微信扫一扫" data-html="true" data-content="<img src='images/weixin.png' alt=''>" href="javascript:;" target="_blank"><i></i>关注微信</a>
+                </div>
+                <div class="wall">
+                    <a href="#" target="_blank">读者墙</a> | <a href="#" target="_blank">标签云</a>
+                </div>
+            </div>
+            <!--/超小屏幕不显示-->
+            <div class="visible-xs header-xs">
+                <!--超小屏幕可见-->
+                <div class="navbar-header header-xs-logo">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#header-xs-menu" aria-expanded="false" aria-controls="navbar"><span
+                            class="glyphicon glyphicon-menu-hamburger"></span></button>
+                </div>
+                <div id="header-xs-menu" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav header-xs-nav">
+                        <li class="active"><a href="index.html"><span class="glyphicon glyphicon-home"></span>网站主页</a>
+                        </li>
+                        <li><a href="project.html"><span class="glyphicon glyphicon-pencil"></span>项目demo</a></li>
+                        <li><a href="photo.html"><span class="glyphicon glyphicon-book"></span>相册</a></li>
+                        <li><a href="about.html"><span class="glyphicon glyphicon-user"></span>关于我</a></li>
+                        <li><a href="message.html"><span class="glyphicon glyphicon-list-alt"></span>留言板</a></li>
+
+                    </ul>
+                    <form class="navbar-form" action="search.php" method="post" style="padding:0 25px;">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="请输入关键字">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default btn-search" type="submit">搜索</button>
+                            </span> </div>
+                    </form>
+                </div>
+            </div>
+        </header>
+        <!--/超小屏幕可见-->
+        <div class="content-wrap">
+            <!--内容-->
+            <div class="content">
+                <header class="news_header">
+                    <h2>webpack 构建流程</h2>
+                    <ul>
+                        <li>DLC 发布于 2019-02-10</li>
+                        <li>栏目：<a href="" title="" target="_blank">网站前端</a></li>
+                        <li>来源：<a href="" title="" target="_blank">互联网</a></li>
+                        <li><span class="glyphicon glyphicon-eye-open"></span> <strong>2002</strong> 预览</li>
+                        <li><strong> 10 </strong> 评论</li>
+                    </ul>
+                </header>
+                <article class="news_content">
+                    <h4>webpack 基本架构</h4>
+                    <p>webpack 的基本架构，是基于一种类似事件的方式。下面的代码中，对象可以使用 plugin 函数来注册一个事件，暂时可以理解为我们熟悉的 addEventListener。但为了区 分概念，后续的讨论中会将事件名称为 任务点，比如下面有四个任务点</p>
+                    <p>compilation, optimize, compile, before-resolve：</p>
+                    <p><textarea readonly name="over" rows="10" cols="80">compiler.plugin("compilation", (compilation, callback) => { 
+                    // 当 Compilation 实例生成时 
+                    compilation.plugin("optimize", () => { 
+                        // 当所有 modules 和 chunks 已生成，开始优化时 
+                    }) }) 
+                compiler.plugin("compile", (params) => { 
+                    // 当编译器开始编译模块时 
+                    let nmf = params.normalModuleFactory 
+                    nmf.plugin("before-resolve", (data) => { 
+                        // 在 factory 开始解析模块前 
+                    }) 
+                }) 
+                </textarea> </p>
+                    <p>webpack 内部的大部分功能，都是通过这种注册任务点的形式来实现的，这在后面中我们 很容易发现这一点。所以这里直接抛出结论：webpack 的核心功能，是抽离成很多个内 部插件来实现的。 </p>
+                    <p>那这些内部插件是如何对 webpack 产生作用的呢？在我们开始运行 webpack 的时候，它 会先创建一个 Compiler 实例，然后调用 WebpackOptionsApply 这个模块给 Compiler 实例添加内部插件： </p>
+                    <p><textarea readonly name="" rows="3" cols="80">compiler = new Compiler(); 
+                        // 其他代码.. 
+                        compiler.options = new WebpackOptionsApply().process(options, compiler); </textarea> </p>
+                    <p>在 WebpackOptionsApply 这个插件内部会根据我们传入的 webpack 配置来初始化需要的 内部插件： </p>
+                    <p><textarea readonly name="" rows="10" cols="80">JsonpTemplatePlugin = require("./JsonpTemplatePlugin"); NodeSourcePlugin = require("./node/NodeSourcePlugin"); compiler.apply( 
+                        new JsonpTemplatePlugin(options.output), 
+                        new FunctionModulePlugin(options.output), 
+                        new NodeSourcePlugin(options.node), 
+                        new LoaderTargetPlugin(options.target) ); 
+                    // 其他代码.. 
+                    compiler.apply(new EntryOptionPlugin()); 
+                    compiler.applyPluginsBailResult("entry-option", options.context, options.entry); 
+                    compiler.apply( 
+                        new CompatibilityPlugin(), 
+                        new HarmonyModulesPlugin(options.module), 
+                        new AMDPlugin(options.module, options.amd || {}), 
+                        new CommonJsPlugin(options.module), 
+                        new LoaderPlugin(), 
+                        new NodeStuffPlugin(options.node), 
+                        new RequireJsStuffPlugin(), 
+                        new APIPlugin(), 
+                        new ConstPlugin(), 
+                        new UseStrictPlugin(), 
+                        new RequireIncludePlugin(), 
+                        new RequireEnsurePlugin(), 
+                        new RequireContextPlugin(options.resolve.modules, options.resolve.extensions, options.resolve.mainFiles), 
+                        new ImportPlugin(options.module), 
+                        new SystemPlugin(options.module) ); </textarea> </p>
+                    <p>每一个内部插件，都是通过监听任务点的方式，来实现自定义的逻辑。比如 JsonpTemplatePlugin 这个插件，是通过监听 mainTemplate 对象的 require-ensure 任 务点，来生成 jsonp 风格的代码： </p>
+                    <p> <textarea readonly name="" rows="10" cols="80">mainTemplate.plugin("require-ensure", function(_, chunk, hash) { 
+                        return this.asString([ 
+                            "var installedChunkData = installedChunks[chunkId];", 
+                            "if(installedChunkData === 0) {", 
+                            this.indent([ 
+                                "return new Promise(function(resolve) { resolve(); });" 
+                            ]), 
+                            "}", 
+                            "", 
+                            "// a Promise means \"currently loading\".", 
+                            "if(installedChunkData) {", 
+                            this.indent([ 
+                                "return installedChunkData[2];" 
+                            ]), 
+                            "}", 
+                            "", 
+                            "// setup Promise in chunk cache", 
+                            "var promise = new Promise(function(resolve, reject) {", 
+                            this.indent([ 
+                                "installedChunkData = installedChunks[chunkId] = [resolve, reject];" 
+                            ]), 
+                            "});", 
+                            "installedChunkData[2] = promise;", 
+                            "", 
+                            "// start chunk loading", 
+                            "var head = document.getElementsByTagName('head')[0];", 
+                            this.applyPluginsWaterfall("jsonp-script", "", chunk, hash), 
+                            "head.appendChild(script);", 
+                            "", 
+                            "return promise;" 
+                        ]); }); 
+                        </textarea></p>
+                    <p>现在我们理解了 webpack 的基本架构之后，可能会产生疑问，每个插件应该监听哪个对 象的哪个任务点，又如何对实现特定功能呢？ </p>
+                    <p>要完全解答这个问题很难，原因在于 webpack 中构建过程中，会涉及到非常多的对象和 任务点，要对每个对象和任务点都进行讨论是很困难的。但是，我们仍然可以挑选完整 构建流程中涉及到的几个核心对象和任务点，把 webpack 的构建流程讲清楚，当我们需 要实现某个特定内容的时候，再去找对应的模块源码查阅任务点。</p>
+                    <h4>webpack 的构建流程 </h4>
+                    <p>三个阶段 </p>
+                    <p>1.webpack 的准备阶段</p>
+                    <p>2.modules 和 chunks 的生成阶段 </p>
+                    <p>3.文件生成阶段 </p>
+                    <h4>webpack 的准备阶段 </h4>
+                    <p>这个阶段的主要工作，是创建 Compiler 和 Compilation 实例。</p>
+                    <p>首先我们从 webpack 的运行开始讲起，在前面我们大概地讲过，当我们开始运行 webpack 的时候，就会创建 Compiler 实例并且加载内部插件。这里跟构建流程相关性比 较大的内部插件是 EntryOptionPlugin，我们来看看它到底做了什么：</p>
+                    <p> <textarea readonly name="" rows="10" cols="80">
+// https://github.com/webpack/webpack/blob/master/lib/WebpackOptionsApply.js compiler.apply(new EntryOptionPlugin()); 
+compiler.applyPluginsBailResult("entry-option", options.context, 
+options.entry); // 马上触发任务点运行 EntryOptionPlugin 内部逻辑 
+// https://github.com/webpack/webpack/blob/master/lib/EntryOptionPlugin.js module.exports = class EntryOptionPlugin { 
+    apply(compiler) { 
+        compiler.plugin("entry-option", (context, entry) => { 
+            if(typeof entry === "string" || Array.isArray(entry)) { 
+                compiler.apply(itemToPlugin(context, entry, "main")); 
+            } else if(typeof entry === "object") { 
+                Object.keys(entry).forEach(name => compiler.apply(itemToPlugin(context, entry[name], name))); 
+            } else if(typeof entry === "function") { 
+                compiler.apply(new DynamicEntryPlugin(context, entry)); 
+            } 
+            return true; 
+        }); 
+    } }; 
+</textarea></p>
+                    <p>EntryOptionPlugin 的代码只有寥寥数行但是非常重要，它会解析传给 webpack 的配置 中的 entry 属性，然后生成不同的插件应用到 Compiler 实例上。这些插件可能是 SingleEntryPlugin, MultiEntryPlugin 或者 DynamicEntryPlugin。但不管是哪个插 件，内部都会监听 Compiler 实例对象的 make 任务点，以 SingleEntryPlugin 为例：</p>
+                    <p> <textarea readonly name="" rows="10" cols="80">
+                        // https://github.com/webpack/webpack/blob/master/lib/SingleEntryPlugin.js 
+                        class SingleEntryPlugin { 
+                            // 其他代码.. 
+                            apply(compiler) { 
+                                // 其他代码.. 
+                                compiler.plugin("make", (compilation, callback) => { 
+                                    const dep = SingleEntryPlugin.createDependency(this.entry, this.name); 
+                                    compilation.addEntry(this.context, dep, this.name, callback); 
+                                }); 
+                            } } 
+                    </textarea></p>
+                    <p>这里的 make 任务点将成为后面解析 modules 和 chunks 的起点。 </p>
+                    <p>除了 EntryOptionPlugin，其他的内部插件也会监听特定的任务点来完成特定的逻辑，但 我们这里不再仔细讨论。当 Compiler 实例加载完内部插件之后，下一步就会直接调用 compiler.run 方法来启动构建，任务点 run 也是在此时触发，值得注意的是此时基本只 有 options 属性是解析完成的： </p>
+                    <p> <textarea readonly name="" rows="5" cols="80">compiler.plugin("run", (compiler, callback) => { 
+                            console.log(compiler.options) // 可以看到解析后的配置 
+                            callback() }) </textarea></p>
+                    <p>另外要注意的一点是，任务点 run 只有在 webpack 以正常模式运行的情况下会触发， 如果我们以监听(watch)的模式运行 webpack，那么任务点 run 是不会触发的，但是会 触发任务点 watch-run。</p>
+                    <p>接下来， Compiler 对象会开始实例化两个核心的工厂对象，分别是 NormalModuleFactory 和 ContextModuleFactory。工厂对象顾名思义就是用来创建实例 的，它们后续用来创建 NormalModule 以及 ContextModule 实例，这两个工厂对象会在 任务点 compile 触发时传递过去，所以任务点 compile 是间接监听这两个对象的任务点 的一个入口： </p>
+                    <p> <textarea readonly name="" rows="5" cols="80">
+                            // 监听任务点 compile 
+                            compiler.plugin("compile", (params) => { 
+                                let nmf = params.normalModuleFactory 
+                                nmf.plugin("before-resolve", (data, callback) => { 
+                                    // ... 
+                                }) }) 
+                    </textarea></p>
+                    <p>下一步 Compiler 实例将会开始创建 Compilation 对象，这个对象是后续构建流程中最 核心最重要的对象，它包含了一次构建过程中所有的数据。也就是说一次构建过程对应一 个 Compilation 实例。在创建 Compilation 实例时会触发任务点 compilaiion 和 this-compilation：</p>
+                    <p> <textarea readonly name="" rows="10" cols="80">
+                            class Compiler extends Tapable { 
+
+                                // 其他代码.. 
+                                newCompilation(params) { 
+                                    const compilation = this.createCompilation(); 
+                                    compilation.fileTimestamps = this.fileTimestamps; 
+                                    compilation.contextTimestamps = this.contextTimestamps; 
+                                    compilation.name = this.name; 
+                                    compilation.records = this.records; 
+                                    compilation.compilationDependencies = params.compilationDependencies; 
+                                    this.applyPlugins("this-compilation", compilation, params); 
+                                    this.applyPlugins("compilation", compilation, params); 
+                                    return compilation; 
+                                } } 
+                    </textarea></p>
+                    <p>这里为什么会有 compilation 和 this-compilation 两个任务点？其实是跟子编译器有 关，Compil。er 实例通过 createChildCompiler 方法可以创建子编译器实例 childCompiler，创建时 childCompiler 会复制 compiler 实例的任务点监听器。任务 点 compilation 的监听器会被复制，而任务点 this-compilation 的监听器不会被复 制。 </p>
+                    <p>compilation 和 this-compilation 是最快能够获取到 Compilation 实例的任务点，如 果你的插件功能需要尽早对 Compilation 实例进行一些操作，那么这两个任务点是首 选： </p>
+                    <p> <textarea readonly name="" rows="5" cols="80">compiler.plugin("this-compilation", (compilation, params) => { console.log(compilation.options === compiler.options) // true console.log(compilation.compiler === compiler) //
+                            true console.log(compilation) }) </textarea></p>
+                    <p>当 Compilation 实例创建完成之后，webpack 的准备阶段已经完成，下一步将开始 modules 和 chunks 的生成阶段。 </p>
+                    <p>当 Compilation 实例创建完成之后，webpack 的准备阶段已经完成，下一步将开始 modules 和 chunks 的生成阶段。</p>
+                    <h4>总结 </h4>
+                    <p>我们将 webpack 的基本架构以及核心的构建流程都过了一遍，希望在阅读完全文之后， 对大家了解 webpack 原理有所帮助。 </p>
+
+                </article>
+                <div class="reprint">转载请说明出处：<a href="" title="" target="_blank">DLC-个人网站</a> » <a href="" title="" target="_blank">欢迎来到DLC-个人网站</a></div>
+                <div class="zambia"><a href="javascript:;" name="zambia" rel=""><span
+                            class="glyphicon glyphicon-thumbs-up"></span> 赞（0）</a></div>
+
+                <nav class="page-nav"> <span class="page-nav-prev">上一篇<br />
+                        <a href="content 2.html" rel="prev">如何使用内容发布网络（CDN)优化网络性能</a></span> <span class="page-nav-next">下一篇<br />
+                        <a href="content 4.html" rel="next">如何进行代码压缩使页面性能最优（HTTP压缩）</a></span> </nav>
+
+                <div class="content-block comment">
+                    <h2 class="title"><strong>评论</strong></h2>
+                    <form action="comment.php" method="post" class="form-inline" id="comment-form">
+
+                        <div class="comment-form">
+                            <textarea placeholder="说说您的想法" name="commentContent"></textarea>
+                            <div class="comment-form-footer">
+                                <div class="comment-form-text">请先 <a href="javascript:;">登录</a> 或 <a href="javascript:;">注册</a>，也可匿名评论 </div>
+                                <div class="comment-form-btn">
+                                    <button type="submit" class="btn btn-default btn-comment">提交评论</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        <!--/内容-->
+        <aside class="sidebar visible-lg">
+            <!--右侧>992px显示-->
+            <div class="sentence"> <strong>每日一句</strong>
+                <h2>2019年5月1日 星期三</h2>
+                <p>如果你看到面前的阴影，别怕，那是因为你的背后有阳光。</p>
+            </div>
+            <div id="search" class="sidebar-block search" role="search">
+                <h2 class="title"><strong>搜索</strong></h2>
+                <form class="navbar-form" action="search.php" method="post">
+                    <div class="input-group">
+                        <input type="text" class="form-control" size="35" placeholder="请输入关键字">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default btn-search" type="submit">搜索</button>
+                        </span> </div>
+                </form>
+            </div>
+            <div class="sidebar-block recommend">
+                <h2 class="title"><strong>热门推荐</strong></h2>
+                <ul>
+                    <li>
+                        <a target="_blank" href="content 4.html"> <span class="thumb"><img src="images/icon/icon1.png" alt=""></span>
+                            <span class="text">如何进行代码压缩使页面性能最优（HTTP压缩）...</span> <span class="text-muted">阅读(2165)</span></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="content 3.html"> <span class="thumb"><img src="images/icon/icon2.png" alt=""></span>
+                            <span class="text">webpack 基本架构 ...</span> <span class="text-muted">阅读(2165)</span></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="content 2.html"> <span class="thumb"><img src="images/icon/icon4.png" alt=""></span>
+                            <span class="text">如何使用内容发布网络（CDN)优化网络性能 ...</span> <span class="text-muted">阅读(2165)</span></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="content 1.html"> <span class="thumb"><img src="images/icon/icon3.png" alt=""></span>
+                            <span class="text">如何减少 HTTP 请求 确保你的性能最优 ...</span> <span class="text-muted">阅读(2165)</span></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="content.html"> <span class="thumb"><img src="images/icon/icon0.png" alt=""></span>
+                            <span class="text">常用的 ajax 优化方法有哪些 ...</span> <span class="text-muted">阅读(2165)</span></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sidebar-block comment">
+                <h2 class="title"><strong>最新评论</strong></h2>
+                <ul>
+                    <li data-toggle="tooltip" data-placement="top" title=""><a target="_blank" href=""><span
+                                class="face"><img src="images/icon/icon.png" alt=""></span> <span
+                                class="text"><strong>猎户星座</strong> (2015-10-18) 说：<br />
+                                感谢分享，学习了很受益 ...</span></a></li>
+                    <li data-toggle="tooltip" data-placement="top" title=""><a target="_blank" href=""><span
+                                class="face"><img src="images/icon/icon.png" alt=""></span> <span
+                                class="text"><strong>人生苦短</strong> (2015-10-18) 说：<br />
+                                学习了，加油站长 ...</span></a></li>
+                    <li data-toggle="tooltip" data-placement="top" title=""><a target="_blank" href=""><span class="face"><img src="images/icon/icon.png" alt=""></span>
+                            <span class="text"><strong>负刀入梦里</strong> (2015-10-18) 说：<br />
+                                文章很详细，也通俗易懂，很是受益 ...</span></a></li>
+                    <li data-toggle="tooltip" data-placement="top" title=""><a target="_blank" href=""><span class="face"><img src="images/icon/icon.png" alt=""></span>
+                            <span class="text"><strong>梦幻代码</strong> (2015-10-18) 说：<br />
+                                人生苦短，我用Python ...</span></a></li>
+                    <li data-toggle="tooltip" data-placement="top" title=""><a target="_blank" href=""><span class="face"><img src="images/icon/icon.png" alt=""></span>
+                            <span class="text"><strong>宅男</strong> (2015-10-18) 说：<br />
+                                大神，前端有哪些框架呢 ...</span></a></li>
+                </ul>
+            </div>
+        </aside>
+        <!--/右侧>992px显示-->
+        <footer class="footer">邓力才 | 版权所有 &copy;<a href="#">2018-2019</a>&nbsp;| 网站创建时间：2019-05-01 08:10:20 &nbsp;&nbsp;&nbsp;<span><a href="http://icp.chinaz.com/"
+            target="_blank">粤ICP备xxxxxxxx号-x</a></span>
+        </footer>
+    </section>
+    <div>
+        <a href="javascript:;" class="gotop" style="display:none;"></a>
+    </div>
+    <!--/返回顶部-->
+    <script src="js/jquery-2.1.4.min.js" type="text/javascript"></script>
+    <script src="js/nprogress.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        //页面加载
+        $('body').show();
+        $('.version').text(NProgress.version);
+        NProgress.start();
+        setTimeout(function() {
+            NProgress.done();
+            $('.fade').removeClass('out');
+        }, 1000);
+
+        //返回顶部按钮
+        $(function() {
+            $(window).scroll(function() {
+                if ($(window).scrollTop() > 100) {
+                    $(".gotop").fadeIn();
+                } else {
+                    $(".gotop").hide();
+                }
+            });
+            $(".gotop").click(function() {
+                $('html,body').animate({
+                    'scrollTop': 0
+                }, 500);
+            });
+        });
+        //提示插件启用
+        $(function() {
+            $('[data-toggle="popover"]').popover();
+        });
+        $(function() {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+        //鼠标滑过显示 滑离隐藏
+        //banner
+        $(function() {
+            $(".carousel").hover(function() {
+                $(this).find(".carousel-control").show();
+            }, function() {
+                $(this).find(".carousel-control").hide();
+            });
+        });
+        //本周热门
+        $(function() {
+            $(".hot-content ul li").hover(function() {
+                $(this).find("h3").show();
+            }, function() {
+                $(this).find("h3").hide();
+            });
+        });
+        //相关推荐
+        $(function() {
+            $(".related-content ul li").hover(function() {
+                $(this).find("h3").show();
+            }, function() {
+                $(this).find("h3").hide();
+            });
+        });
+        //页面元素智能定位
+        $.fn.smartFloat = function() {
+            var position = function(element) {
+                var top = element.position().top; //当前元素对象element距离浏览器上边缘的距离 
+                var pos = element.css("position"); //当前元素距离页面document顶部的距离
+                $(window).scroll(function() { //侦听滚动时 
+                    var scrolls = $(this).scrollTop();
+                    if (scrolls > top) { //如果滚动到页面超出了当前元素element的相对页面顶部的高度 
+                        if (window.XMLHttpRequest) { //如果不是ie6 
+                            element.css({ //设置css 
+                                position: "fixed", //固定定位,即不再跟随滚动 
+                                top: 0 //距离页面顶部为0 
+                            }).addClass("shadow"); //加上阴影样式.shadow 
+                        } else { //如果是ie6 
+                            element.css({
+                                top: scrolls //与页面顶部距离 
+                            });
+                        }
+                    } else {
+                        element.css({ //如果当前元素element未滚动到浏览器上边缘，则使用默认样式 
+                            position: pos,
+                            top: top
+                        }).removeClass("shadow"); //移除阴影样式.shadow 
+                    }
+                });
+            };
+            return $(this).each(function() {
+                position($(this));
+            });
+        };
+        //启用页面元素智能定位
+        $(function() {
+            $("#search").smartFloat();
+        });
+
+
+        //ajax更新点赞值
+        $(function() {
+            $(".content .zambia a").click(function() {
+                var zambia = $(this);
+                var id = zambia.attr("rel"); //对应id   
+                zambia.fadeOut(1000); //渐隐效果   
+                $.ajax({
+                    type: "POST",
+                    url: "zambia.php",
+                    data: "id=" + id,
+                    cache: false, //不缓存此页面   
+                    success: function(data) {
+                        zambia.html(data);
+                        zambia.fadeIn(1000); //渐显效果   
+                    }
+                });
+                return false;
+            });
+        })
+    </script>
+</body>
+
+</html>

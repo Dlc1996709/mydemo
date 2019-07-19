@@ -1,0 +1,373 @@
+﻿<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DLC-个人网站</title>
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link href="css/nprogress.css" type="text/css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js" type="text/javascript"></script>
+    <script src="js/respond.min.js" type="text/javascript"></script>
+    <script src="js/selectivizr-min.js" type="text/javascript"></script>
+<![endif]-->
+    <link rel="apple-touch-icon-precomposed" href="images/icon/icon.png">
+    <link rel="shortcut icon" href="images/icon/favicon.ico">
+    <meta name="Keywords" content="" />
+    <meta name="description" content="" />
+    <script type="text/javascript">
+        //判断浏览器是否支持HTML5
+        window.onload = function() {
+            if (!window.applicationCache) {
+                window.location.href = "ie.html";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <section class="container user-select">
+        <header>
+            <div class="hidden-xs header">
+                <!--超小屏幕不显示-->
+                <h1 class="logo">
+                    <a href="index.html" title="DLC-个人网站"></a>
+                </h1>
+                <ul class="nav hidden-xs-nav">
+                    <li class="active"><a href="index.html"><span class="glyphicon glyphicon-home"></span>网站主页</a></li>
+                    <li><a href="project.html"><span class="glyphicon glyphicon-pencil"></span>项目demo</a></li>
+                    <li><a href="photo.html"><span class="glyphicon glyphicon-book"></span>相册</a></li>
+                    <li><a href="about.html"><span class="glyphicon glyphicon-user"></span>关于我</a></li>
+                    <li><a href="message.html"><span class="glyphicon glyphicon-list-alt"></span>留言板</a></li>
+
+                </ul>
+                <div class="feeds">
+                    <a class="feed feed-xlweibo" href="https://weibo.com/" target="_blank"><i></i>新浪微博</a>
+                    <a class="feed feed-txweibo" href="https://baijiahao.baidu.com/" target="_blank"><i></i>百家号</a>
+                    <a class="feed feed-rss" href="https://mp.toutiao.com/profile_v3/index" target="_blank"><i></i>头条号</a>
+                    <a class="feed feed-weixin" data-toggle="popover" data-trigger="hover" title="微信扫一扫" data-html="true" data-content="<img src='images/weixin.png' alt=''>" href="javascript:;" target="_blank"><i></i>关注微信</a>
+                </div>
+                <div class="wall">
+                    <a href="#" target="_blank">读者墙</a> | <a href="#" target="_blank">标签云</a>
+                </div>
+            </div>
+            <!--/超小屏幕不显示-->
+            <div class="visible-xs header-xs">
+                <!--超小屏幕可见-->
+                <div class="navbar-header header-xs-logo">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#header-xs-menu" aria-expanded="false" aria-controls="navbar"><span
+                            class="glyphicon glyphicon-menu-hamburger"></span></button>
+                </div>
+                <div id="header-xs-menu" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav header-xs-nav">
+                        <li class="active"><a href="index.html"><span class="glyphicon glyphicon-home"></span>网站主页</a>
+                        </li>
+                        <li><a href="project.html"><span class="glyphicon glyphicon-pencil"></span>项目demo</a></li>
+                        <li><a href="photo.html"><span class="glyphicon glyphicon-book"></span>相册</a></li>
+                        <li><a href="about.html"><span class="glyphicon glyphicon-user"></span>关于我</a></li>
+                        <li><a href="about.html"><span class="glyphicon glyphicon-list-alt"></span>留言板</a></li>
+
+                    </ul>
+                    <form class="navbar-form" action="search.php" method="post" style="padding:0 25px;">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="请输入关键字">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default btn-search" type="submit">搜索</button>
+                            </span> </div>
+                    </form>
+                </div>
+            </div>
+        </header>
+        <!--/超小屏幕可见-->
+        <div class="content-wrap">
+            <!--内容-->
+            <div class="content">
+                <header class="news_header">
+                    <h2>你了解 CDN 么? 如何使用内容发布网络 （CDN)优化网络性能 ?</h2>
+                    <ul>
+                        <li>DLC 发布于 2019-01-30</li>
+                        <li>栏目：<a href="" title="" target="_blank">网站前端</a></li>
+                        <li>来源：<a href="" title="" target="_blank">互联网</a></li>
+                        <li><span class="glyphicon glyphicon-eye-open"></span> <strong>2002</strong> 预览</li>
+                        <li><strong> 10 </strong> 评论</li>
+                    </ul>
+                </header>
+                <article class="news_content">
+
+                    <h4>一、CDN 的基本原理和基础架构 </h4>
+
+                    <p>CDN 是将源站内容分发至最接近用户的节点，使用户可就近取得所需内容，提高用户访问 的响应速度和成功率。解决因分布、带宽、服务器性能带来的访问延迟问题，适用于站点 加速、点播、直播等场景。</p>
+                    <p>最简单的 CDN 网络由一个 DNS 服务器和几台缓存服务器组成： </p>
+                    <p>1.当用户点击网站页面上的内容 URL，经过本地 DNS 系统解析，DNS 系统会最终将域 名的解析权交给 CNAME 指向的 CDN 专用 DNS 服务器。 </p>
+                    <p>2.CDN 的 DNS 服务器将 CDN 的全局负载均衡设备 IP 地址返回用户。</p>
+                    <p>3.用户向 CDN 的全局负载均衡设备发起内容 URL 访问请求。</p>
+                    <p>4.CDN 全局负载均衡设备根据用户 IP 地址，以及用户请求的内容 URL，选择一台用户 所属区域的区域负载均衡设备，告诉用户向这台设备发起请求。 </p>
+                    <p>5.区域负载均衡设备会为用户选择一台合适的缓存服务器提供服务，选择的依据包 括：根据用户 IP 地址，判断哪一台服务器距用户最近；根据用户所请求的 URL 中 携带的内容名称，判断哪一台服务器上有用户所需内容；查询各个服务器当前的负 载情况，判断哪一台服务器尚有服务能力。基于以上这些条件的综合分析之后，区 域负载均衡设备会向全局负载均衡设备返回一台缓存服务器的 IP 地址。</p>
+                    <p>6.全局负载均衡设备把服务器的 IP 地址返回给用户。 </p>
+                    <p>7.用户向缓存服务器发起请求，缓存服务器响应用户请求，将用户所需内容传送到用 户终端。如果这台缓存服务器上并没有用户想要的内容，而区域均衡设备依然将它 分配给了用户，那么这台服务器就要向它的上一级缓存服务器请求内容，直至追溯 到网站的源服务器将内容拉到本地。 </p>
+                    <h4>CDN 关键组件</h4>
+                    <p>• LVS 做四层均衡负载</p>
+                    <p>DR 模式 双 LVS 做 Active-Active 互备 负载均衡算法采用 wrr </p>
+                    <p>• Tengine 做七层负载均衡</p>
+                    <p>阿里基于 Nginx 开发的高性能 HTTP 服务器，已经开源。 主动健康检查 SPDY v3 支持 </p>
+                    <p>• Swift 做 HTTP 缓存</p>
+                    <p>高性能 Cache 磁盘（SSD/SATA）
+                    </p>
+                    <p><img src="images/img2-1.png" alt="" title="" /></p>
+                    <h4>二、为什么要使用 CDN？或者说 CDN 能解决什么问题？ </h4>
+                    <p>如果你在经营一家网站，那你应该知道几点因素是你制胜的关键： </p>
+                    <p>•内容有吸引力 </p>
+                    <p>•访问速度快 </p>
+                    <p>•支持频繁的用户互动 </p>
+                    <p>•可以在各处浏览无障碍</p>
+                    <p>另外，你的网站必须能在复杂的网络环境下运行，考虑到全球的用户访问体验。你的网站 也会随着使用越来越多的对象（如图片、帧、CSS 及 APIs）和形形色色的动作（分享、跟 踪）而系统逐渐庞大。所以，系统变慢带来用户的流失。</p>
+                    <p>Google 及其它网站的研究表明，一个网站每慢一秒钟，就会丢失许多访客，甚至这些访 客永远不会再次光顾这些网站。可以想像，如果网站是你的盈利渠道或是品牌窗口，那么 网站速度慢将是一个致命的打击。</p>
+                    <p>这就是你使用 CDN 的第一个也是最重要的原因：**为了加速网站的访问** </p>
+                    <p>除此之外，CDN 还有一些作用：</p>
+                    <p>1. 为了实现跨运营商、跨地域的全网覆盖 </p>
+                    <p>互联不互通、区域 ISP 地域局限、出口带宽受限制等种种因素都造成了网站的区域性无法 访问。CDN 加速可以覆盖全球的线路，通过和运营商合作，部署 IDC 资源，在全国骨干节 点商，合理部署 CDN 边缘分发存储节点，充分利用带宽资源，平衡源站流量。阿里云在国 内有 500+节点，海外 300+节点，覆盖主流国家和地区不是问题，可以确保 CDN 服务的稳 定和快速。</p>
+                    <p>2. 为了保障你的网站安全 </p>
+                    <p>CDN 的负载均衡和分布式存储技术，可以加强网站的可靠性，相当无无形中给你的网站添 加了一把保护伞，应对绝大部分的互联网攻击事件。防攻击系统也能避免网站遭到恶意攻 击。</p>
+                    <p>3. 为了异地备援 </p>
+                    <p>当某个服务器发生意外故障时，系统将会调用其他临近的健康服务器节点进行服务，进而 提供接近 100%的可靠性，这就让你的网站可以做到永不宕机。</p>
+                    <p>4. 为了节约成本投入</p>
+                    <p>使用 CDN 加速可以实现网站的全国铺设，你根据不用考虑购买服务器与后续的托管运维， 服务器之间镜像同步，也不用为了管理维护技术人员而烦恼，节省了人力、精力和财力。
+                    </p>
+                    <p>5. 为了让你更专注业务本身 </p>
+                    <p>CDN 加速厂商一般都会提供一站式服务，业务不仅限于 CDN，还有配套的云存储、大数据 服务、视频云服务等，而且一般会提供 7x24 运维监控支持，保证网络随时畅通，你可以 放心使用。并且将更多的精力投入到发展自身的核心业务之上。 </p>
+                    <h4>三、CDN 适用哪些场景？</h4>
+                    <p>1、网站站点/应用加速 </p>
+                    <p>站点或者应用中大量静态资源的加速分发，建议将站点内容进行动静分离，动态文件可以 结合云服务器 ECS，静态资源如各类型图片、html、css、js 文件等，建议结合 对象存储 OSS 存储海量静态资源，可以有效加速内容加载速度，轻松搞定网站图片、短视频等内容 分发。</p>
+                    <p>• 架构示意图</p>
+                    <p><img src="images/img2-2.png" alt="" title="" /></p>
+                    <p>2、视音频点播/大文件下载分发加速 </p>
+                    <p>支持各类文件的下载、分发，支持在线点播加速业务，如 mp4、flv 视频文件或者平均单 个文件大小在 20M 以上，主要的业务场景是视音频点播、大文件下载（如安装包下载） 等，建议搭配对象存储 OSS 使用，可提升回源速度，节约近 2/3 回源带宽成本。</p>
+                    <p>• 架构示意图 </p>
+                    <p><img src="images/img2-3.png" alt="" title="" /></p>
+                    <p>4、移动应用加速 </p>
+                    <p>移动 APP 更新文件（apk 文件）分发，移动 APP 内图片、页面、短视频、UGC 等内容的优 化加速分发。提供 httpDNS 服务，避免 DNS 劫持并获得实时精确的 DNS 解析结果，有效缩 短用户访问时间，提升用户体验。 </p>
+                    <p>• 架构示意图 </p>
+                    <p><img src="images/img2-4.png" alt="" title="" /></p>
+
+                </article>
+                <div class="reprint">转载请说明出处：<a href="" title="" target="_blank">DLC-个人网站</a> » <a href="" title="" target="_blank">欢迎来到DLC-个人网站</a></div>
+                <div class="zambia"><a href="javascript:;" name="zambia" rel=""><span
+                            class="glyphicon glyphicon-thumbs-up"></span> 赞（0）</a></div>
+
+                <nav class="page-nav"> <span class="page-nav-prev">上一篇<br />
+                        <a href="content 1.html" rel="prev">如何减少 HTTP 请求 确保你的性能最优</a></span> <span class="page-nav-next">下一篇<br />
+                        <a href="content 3.html" rel="next">webpack 基本架构</a></span> </nav>
+
+                <div class="content-block comment">
+                    <h2 class="title"><strong>评论</strong></h2>
+                    <form action="comment.php" method="post" class="form-inline" id="comment-form">
+
+                        <div class="comment-form">
+                            <textarea placeholder="说说你的想法" name="commentContent"></textarea>
+                            <div class="comment-form-footer">
+                                <div class="comment-form-text">请先 <a href="javascript:;">登录</a> 或 <a href="javascript:;">注册</a>，也可匿名评论 </div>
+                                <div class="comment-form-btn">
+                                    <button type="submit" class="btn btn-default btn-comment">提交评论</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        <!--/内容-->
+        <aside class="sidebar visible-lg">
+            <!--右侧>992px显示-->
+            <div class="sentence"> <strong>每日一句</strong>
+                <h2>2019年5月1日 星期三</h2>
+                <p>如果你看到面前的阴影，别怕，那是因为你的背后有阳光。</p>
+            </div>
+            <div id="search" class="sidebar-block search" role="search">
+                <h2 class="title"><strong>搜索</strong></h2>
+                <form class="navbar-form" action="search.php" method="post">
+                    <div class="input-group">
+                        <input type="text" class="form-control" size="35" placeholder="请输入关键字">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default btn-search" type="submit">搜索</button>
+                        </span> </div>
+                </form>
+            </div>
+            <div class="sidebar-block recommend">
+                <h2 class="title"><strong>热门推荐</strong></h2>
+                <ul>
+                    <li>
+                        <a target="_blank" href="content 4.html"> <span class="thumb"><img src="images/icon/icon1.png" alt=""></span>
+                            <span class="text">如何进行代码压缩使页面性能最优（HTTP压缩）...</span> <span class="text-muted">阅读(2165)</span></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="content 3.html"> <span class="thumb"><img src="images/icon/icon2.png" alt=""></span>
+                            <span class="text">webpack 基本架构 ...</span> <span class="text-muted">阅读(2165)</span></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="content 2.html"> <span class="thumb"><img src="images/icon/icon4.png" alt=""></span>
+                            <span class="text">如何使用内容发布网络（CDN)优化网络性能 ...</span> <span class="text-muted">阅读(2165)</span></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="content 1.html"> <span class="thumb"><img src="images/icon/icon3.png" alt=""></span>
+                            <span class="text">如何减少 HTTP 请求 确保你的性能最优 ...</span> <span class="text-muted">阅读(2165)</span></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="content.html"> <span class="thumb"><img src="images/icon/icon0.png" alt=""></span>
+                            <span class="text">常用的 ajax 优化方法有哪些 ...</span> <span class="text-muted">阅读(2165)</span></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sidebar-block comment">
+                <h2 class="title"><strong>最新评论</strong></h2>
+                <ul>
+                    <li data-toggle="tooltip" data-placement="top" title=""><a target="_blank" href=""><span
+                                class="face"><img src="images/icon/icon.png" alt=""></span> <span
+                                class="text"><strong>猎户星座</strong> (2015-10-18) 说：<br />
+                                感谢分享，学习了很受益 ...</span></a></li>
+                    <li data-toggle="tooltip" data-placement="top" title=""><a target="_blank" href=""><span
+                                class="face"><img src="images/icon/icon.png" alt=""></span> <span
+                                class="text"><strong>人生苦短</strong> (2015-10-18) 说：<br />
+                                学习了，加油站长 ...</span></a></li>
+                    <li data-toggle="tooltip" data-placement="top" title=""><a target="_blank" href=""><span class="face"><img src="images/icon/icon.png" alt=""></span>
+                            <span class="text"><strong>负刀入梦里</strong> (2015-10-18) 说：<br />
+                                文章很详细，也通俗易懂，很是受益 ...</span></a></li>
+                    <li data-toggle="tooltip" data-placement="top" title=""><a target="_blank" href=""><span class="face"><img src="images/icon/icon.png" alt=""></span>
+                            <span class="text"><strong>梦幻代码</strong> (2015-10-18) 说：<br />
+                                人生苦短，我用Python ...</span></a></li>
+                    <li data-toggle="tooltip" data-placement="top" title=""><a target="_blank" href=""><span class="face"><img src="images/icon/icon.png" alt=""></span>
+                            <span class="text"><strong>宅男</strong> (2015-10-18) 说：<br />
+                                大神，前端有哪些框架呢 ...</span></a></li>
+                </ul>
+            </div>
+        </aside>
+        <!--/右侧>992px显示-->
+        <footer class="footer">邓力才 | 版权所有 &copy;<a href="#">2018-2019</a>&nbsp;| 网站创建时间：2019-05-01 08:10:20 &nbsp;&nbsp;&nbsp;<span><a href="http://icp.chinaz.com/"
+            target="_blank">粤ICP备xxxxxxxx号-x</a></span>
+        </footer>
+    </section>
+    <div>
+        <a href="javascript:;" class="gotop" style="display:none;"></a>
+    </div>
+    <!--/返回顶部-->
+    <script src="js/jquery-2.1.4.min.js" type="text/javascript"></script>
+    <script src="js/nprogress.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        //页面加载
+        $('body').show();
+        $('.version').text(NProgress.version);
+        NProgress.start();
+        setTimeout(function() {
+            NProgress.done();
+            $('.fade').removeClass('out');
+        }, 1000);
+        //返回顶部按钮
+        $(function() {
+            $(window).scroll(function() {
+                if ($(window).scrollTop() > 100) {
+                    $(".gotop").fadeIn();
+                } else {
+                    $(".gotop").hide();
+                }
+            });
+            $(".gotop").click(function() {
+                $('html,body').animate({
+                    'scrollTop': 0
+                }, 500);
+            });
+        });
+        //提示插件启用
+        $(function() {
+            $('[data-toggle="popover"]').popover();
+        });
+        $(function() {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+        //鼠标滑过显示 滑离隐藏
+        //banner
+        $(function() {
+            $(".carousel").hover(function() {
+                $(this).find(".carousel-control").show();
+            }, function() {
+                $(this).find(".carousel-control").hide();
+            });
+        });
+        //本周热门
+        $(function() {
+            $(".hot-content ul li").hover(function() {
+                $(this).find("h3").show();
+            }, function() {
+                $(this).find("h3").hide();
+            });
+        });
+        //相关推荐
+        $(function() {
+            $(".related-content ul li").hover(function() {
+                $(this).find("h3").show();
+            }, function() {
+                $(this).find("h3").hide();
+            });
+        });
+        //页面元素智能定位
+        $.fn.smartFloat = function() {
+            var position = function(element) {
+                var top = element.position().top; //当前元素对象element距离浏览器上边缘的距离 
+                var pos = element.css("position"); //当前元素距离页面document顶部的距离
+                $(window).scroll(function() { //侦听滚动时 
+                    var scrolls = $(this).scrollTop();
+                    if (scrolls > top) { //如果滚动到页面超出了当前元素element的相对页面顶部的高度 
+                        if (window.XMLHttpRequest) { //如果不是ie6 
+                            element.css({ //设置css 
+                                position: "fixed", //固定定位,即不再跟随滚动 
+                                top: 0 //距离页面顶部为0 
+                            }).addClass("shadow"); //加上阴影样式.shadow 
+                        } else { //如果是ie6 
+                            element.css({
+                                top: scrolls //与页面顶部距离 
+                            });
+                        }
+                    } else {
+                        element.css({ //如果当前元素element未滚动到浏览器上边缘，则使用默认样式 
+                            position: pos,
+                            top: top
+                        }).removeClass("shadow"); //移除阴影样式.shadow 
+                    }
+                });
+            };
+            return $(this).each(function() {
+                position($(this));
+            });
+        };
+        //启用页面元素智能定位
+        $(function() {
+            $("#search").smartFloat();
+        });
+
+
+        //ajax更新点赞值
+        $(function() {
+            $(".content .zambia a").click(function() {
+                var zambia = $(this);
+                var id = zambia.attr("rel"); //对应id   
+                zambia.fadeOut(1000); //渐隐效果   
+                $.ajax({
+                    type: "POST",
+                    url: "zambia.php",
+                    data: "id=" + id,
+                    cache: false, //不缓存此页面   
+                    success: function(data) {
+                        zambia.html(data);
+                        zambia.fadeIn(1000); //渐显效果   
+                    }
+                });
+                return false;
+            });
+        })
+    </script>
+</body>
+
+</html>
