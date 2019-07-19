@@ -1,2 +1,2 @@
 # mydemo
-a javascrit project
+个人博客网站项目
