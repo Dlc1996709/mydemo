@@ -1,0 +1,2 @@
+# mydemo
+a javascrit project
